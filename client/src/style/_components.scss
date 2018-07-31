@@ -1,0 +1,62 @@
+.jobs_container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.loader__container {
+  text-align: center;
+}
+.button__container {
+  background-color: transparent;
+  border: 2px solid #404041;
+  border-radius: 2px;
+  padding: 10px 30px;
+  color: #404041;
+  transition: background-color 1000ms linear;
+}
+.button__container:hover {
+  cursor: pointer;
+  background-color: var(--color-grey-secondary);
+}
+.filter-box__container {
+  margin-bottom: 10px;
+  &--title {
+    text-align: center;
+  }
+  &-form {
+    display: flex;
+    justify-content: center;
+    &--input {
+      width: 200px;
+      border-radius: 3px;
+    }
+  }
+  &__content {
+    width: 200px;
+    height: 150px;
+    border: 1px solid black;
+    overflow: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    &-component {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid black;
+      &--keyword {
+        margin-right: 5px;
+      }
+      &--button {
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+        transition: background-color 1000ms linear;
+      }
+      &--button:hover {
+        cursor: pointer;
+        background-color: orange;
+      }
+    }
+  }
+}
