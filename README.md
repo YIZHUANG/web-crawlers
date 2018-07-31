@@ -8,7 +8,7 @@ $ Type in the search key words (exclude and include), click and wait for the res
 
 ## Prerequisite
 
-`Make sure you are using Node version 8 + And you have [concurrently](https://www.npmjs.com/package/concurrently)`
+`Make sure you are using Node version 8 +` And you have [concurrently](https://www.npmjs.com/package/concurrently) install globally
 
 ## Install
 
