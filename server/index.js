@@ -10,9 +10,16 @@ app.use(bodyParser.json());
 
 app.post('/api/startCrawling', async (req, res) => {
   const { includeWords, excludeWords } = req.body;
-  await glassDoor(puppeteer, createFiles, includeWords, excludeWords);
-  await stackOverFlow(puppeteer, createFiles, includeWords, excludeWords);
-  await indeed(puppeteer, createFiles, includeWords, excludeWords);
+  const packager = {
+    // funny name ha?
+    puppeteer,
+    createFiles,
+    includeWords,
+    excludeWords
+  };
+  await glassDoor(packager);
+  await stackOverFlow(packager);
+  await indeed(packager);
   //await linkedin(puppeteer, createFiles, includeWords, excludeWords);
   const data = await readAllfiles();
   res.send(data);

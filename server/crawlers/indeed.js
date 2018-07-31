@@ -1,4 +1,4 @@
-async function indeed(puppeteer, createFiles, includeWords, excludeWords) {
+async function indeed({ puppeteer, createFiles, includeWords, excludeWords }) {
   const browser = await puppeteer.launch({
     headless: true,
     args: ['--no-sandbox', '--disable-setuid-sandbox']

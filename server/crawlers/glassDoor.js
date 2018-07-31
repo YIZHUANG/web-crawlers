@@ -1,4 +1,9 @@
-async function glassDoor(puppeteer, createFiles, includeWords, excludeWords) {
+async function glassDoor({
+  puppeteer,
+  createFiles,
+  includeWords,
+  excludeWords
+}) {
   const browser = await puppeteer.launch({
     args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
