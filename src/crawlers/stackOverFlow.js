@@ -58,4 +58,4 @@ async function stackOverFlow({
   });
   return await browser.close();
 }
-export default stackOverFlow;
+module.exports = stackOverFlow;

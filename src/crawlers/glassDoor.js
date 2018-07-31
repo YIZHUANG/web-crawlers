@@ -44,4 +44,4 @@ async function glassDoor({
   });
   return await browser.close();
 }
-export default glassDoor;
+module.exports = glassDoor;

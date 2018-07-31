@@ -1,10 +1,10 @@
-import fs from 'fs';
-import path from 'path';
+const fs = require('fs');
+const path = require('path');
 const util = require('util');
 
 const asyncReadFile = util.promisify(fs.readFile);
 const asyncReadDir = util.promisify(fs.readdir);
-const baseDir = path.join(__dirname, '/../data/');
+const baseDir = path.join(__dirname, '/data/');
 
 function createFiles(file, data, callback) {
   /*
@@ -51,4 +51,5 @@ async function readFile(file) {
   return await asyncReadFile(baseDir + file, 'utf8');
 }
 
-export { createFiles, readAllfiles };
+exports.createFiles = createFiles;
+exports.readAllfiles = readAllfiles;

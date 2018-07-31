@@ -8,23 +8,23 @@ $ Type in the search key words (exclude and include), click and wait for the res
 
 ## Prerequisite
 
-`Make sure you are using Node version 8 +` And you have [concurrently](https://www.npmjs.com/package/concurrently) install globally
+`Make sure you are using Node version 8 +`
 
 ## Install
 
 ```
-$ npm install -g concurrently
-$ npm install both in the server and client folder.
+$ npm install
 ```
 
 ## Start the app
 
 ```
-$ npm start   in the root folder
+$ npm start    in the root folder
+$ Go to http://localhost:8000/
 ```
 
-## Jsons' location
+## jsons' location
 
 ```
-$ Will be in /server/data
+$ Will be in /src/data folder
 ```

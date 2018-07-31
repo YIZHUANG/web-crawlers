@@ -96,4 +96,4 @@ async function indeed({ puppeteer, createFiles, includeWords, excludeWords }) {
 
   return await browser.close();
 }
-export default indeed;
+module.exports = indeed;
