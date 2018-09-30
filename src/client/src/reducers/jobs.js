@@ -23,9 +23,9 @@ export default (state = INITIAL_STATE, action) => {
       return { hasFailed: true };
     case webCrawlingAction.init:
       return {
+        ...state,
         webCrawlingCompleted: false,
-        webCrawlingInProgress: true,
-        ...state
+        webCrawlingInProgress: true
       };
     case webCrawlingAction.success:
       return {
@@ -35,10 +35,10 @@ export default (state = INITIAL_STATE, action) => {
       };
     case webCrawlingAction.fail:
       return {
+        ...state,
         webCrawlingInProgress: false,
         webCrawlingCompleted: false,
-        hasFailed: true,
-        ...state
+        hasFailed: true
       };
     default:
       return state;

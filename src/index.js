@@ -30,14 +30,13 @@ app.post('/api/startCrawling', async (req, res) => {
   await glassDoor(bundle);
   await stackOverFlow(bundle);
   await indeed(bundle);
-  //await linkedin(puppeteer, createFiles, includeWords, excludeWords);
   const data = await readAllfiles();
   res.send(data);
 });
 app.get('/api/readFiles', (req, res) => {
   readAllfiles()
     .then(data => res.send(data))
-    .catch(error => res.send(error));
+    .catch(error => console.log(error));
 });
 
 module.exports = app;

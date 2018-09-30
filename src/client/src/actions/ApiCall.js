@@ -19,7 +19,7 @@ class ApiCall extends Lifecycle {
       dispatch({
         type: this.init
       });
-      return apiFun
+      apiFun
         .then(response => {
           dispatch({
             type: this.success,

@@ -110,8 +110,8 @@ class Dashboard extends Component {
                   e.preventDefault();
                   this.setState((prevState, props) => ({
                     excludeWords: [
-                      this.state.excludeInput.replace(/\s/g, '').toLowerCase(),
-                      ...prevState.excludeWords
+                      ...prevState.excludeWords,
+                      this.state.excludeInput.replace(/\s/g, '').toLowerCase()
                     ],
                     excludeInput: ''
                   }));
@@ -133,8 +133,8 @@ class Dashboard extends Component {
                   e.preventDefault();
                   this.setState((prevState, props) => ({
                     includeWords: [
-                      this.state.includeInput.replace(/\s/g, '').toLowerCase(),
-                      ...prevState.includeWords
+                      ...prevState.includeWords,
+                      this.state.includeInput.replace(/\s/g, '').toLowerCase()
                     ],
                     includeInput: ''
                   }));
