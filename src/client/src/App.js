@@ -5,10 +5,8 @@ import ReduxThunk from 'redux-thunk';
 import reducers from './reducers';
 import Dashboard from './component/Dashboard';
 
-const store = compose(
-  applyMiddleware(ReduxThunk),
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-)(createStore)(reducers);
+const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
+
 
 const App = () => {
   return (
